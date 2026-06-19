@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mortgage Payment Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="header">
+        <h1>Mortgage Payment Calculator</h1>
+      </div>
+      <div class="left">
+        <h2>
+          This web app calculates the monthly mortgage payment for a fixed-rate
+          mortgage.
+        </h2>
+        <p>
+          Enter the principal, the yearly rate as a percentage, and select the
+          length of the mortgage. After that, click the calculate button to see
+          the monthly mortgage payment for a fixed-rate mortgage.
+        </p>
+      </div>
+      <div class="middle">
+        <p>Enter the principal and interest rate.</p>
+        <form action="javascript:void(0)" onsubmit="calc()">
+          <p>
+            <label for="P">Principal: </label
+            ><input id="P" name="P" type="number" min="1" required />
+          </p>
+          <p>
+            <label for="r">Interest rate: </label
+            ><input
+              id="r"
+              name="r"
+              type="number"
+              min="0"
+              step="0.01"
+              required
+            />
+          </p>
+          <p>
+            <input type="radio" id="10" name="mortgage_length" value="10" />
+            <label for="10">10 years</label>
+            <input type="radio" id="15" name="mortgage_length" value="15" />
+            <label for="15">15 years</label>
+            <input type="radio" id="30" name="mortgage_length" value="30" />
+            <label for="30">30 years</label>
+          </p>
+          <p>Monthly Payment: <span class="monthly_payment"></span></p>
+          <p>
+            <input type="submit" value="Calculate" />
+          </p>
+        </form>
+        <script src="index.mjs"></script>
+      </div>
+      <div class="right">
+        <p>
+          <img
+            src="https://images.pexels.com/photos/5849569/pexels-photo-5849569.jpeg"
+            alt="An image of a house with the word 'mortgage' displayed over top"
+          />
+        </p>
+      </div>
+      <div class="footer">
+        <p>
+          site by <a href="https://www.github.com">kerliakos @ github</a><br />
+          background image by
+          <a
+            href="https://www.pexels.com/photo/close-up-photo-of-gray-wall-2768398/"
+            >MILO TEXTURES @ Pexels</a
+          ><br />mortgage image by
+          <a
+            href="https://www.pexels.com/photo/realtor-suggesting-mortgage-for-buying-apartment-5849569/"
+            >Monstera Production @ Pexels</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
